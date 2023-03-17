@@ -1,41 +1,41 @@
+using JumpingGameClassLibrary;
+
 namespace JumpingGame.Test.StepDefinitions
 {
     [Binding]
     public sealed class JumpGameStepDefinitions
     {
         private readonly ScenarioContext _scenarioContext;
+        private readonly Board _board;
 
         public JumpGameStepDefinitions(ScenarioContext scenarioContext)
         {
             _scenarioContext = scenarioContext;
+            _board = new Board();
         }
 
-        [Given("game has started")]
-        public void GameHasStarted()
+        [When("game is started")]
+        public void GameStarted()
         {
-
-            throw new PendingStepException();4 /;''
+            _board.RunGame();
         }
-
-        [Given("board value is true")]
-        public void BoardValueIsTrue()
+        [Then("game is running")]
+        public void GameIsRunning()
         {
-
-            throw new PendingStepException();
+            _board.GameIsRunning.Should().BeTrue();
         }
-
-        [When("the board is generated")]
-        public void TheBoardIsGenerated()
+        [When("board is generated")]
+        public void BoardGenerated()
         {
-
-            throw new PendingStepException();
+            string boardString = _board.GenerateBoard();
+            _scenarioContext.Add("board", boardString);
         }
-
-        [Then("console displays board")]
-        public void ConsoleDisplaysBoard()
+        [Then("string representation is created")]
+        public void Board()
         {
-
-            throw new PendingStepException();
+            
+            string expectedString = "";
+            _scenarioContext["board"].Should().Be(expectedString);
         }
     }
 }

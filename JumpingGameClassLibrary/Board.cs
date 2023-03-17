@@ -6,23 +6,33 @@ using System.Threading.Tasks;
 
 namespace JumpingGameClassLibrary
 {
-    internal class Board
+    public class Board
     {
-        public void Generate()
+        public bool GameIsRunning { get; set; }
+        public Board()
         {
-            throw new NotImplementedException();
+            GameIsRunning = false;
         }
+        public string GenerateBoard()
+        {
+            // Haven't figured out dimensions. y = 5(could be higher), x = ?
+            return "hi";
+        }
+
         public void UpdateBoard()
         {
             throw new NotImplementedException();
         }
-        public bool EndGame()
+
+        public void EndGame()
         {
-            throw new NotImplementedException();
+            GameIsRunning = false;
         }
-        public bool GameIsRunning()
+
+        public void RunGame()
         {
-            throw new NotImplementedException();
+            GameIsRunning = true;
+
         }
     }
 }
