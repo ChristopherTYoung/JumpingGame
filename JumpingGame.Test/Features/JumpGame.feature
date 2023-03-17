@@ -11,4 +11,7 @@ Scenario: Game Started
 	Then game is running
 Scenario: The board is generated
 	When board is generated
+	Then board array is created
+Scenario: Board is represented as string
+	When board is generated
 	Then string representation is created

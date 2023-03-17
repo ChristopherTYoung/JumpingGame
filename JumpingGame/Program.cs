@@ -1,2 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+using JumpingGameClassLibrary;
+
+var board = new Board();
+var boardArray = board.GenerateBoard();
+var boardString = board.GetBoardAsString(boardArray);
+
+Console.WriteLine(boardString);

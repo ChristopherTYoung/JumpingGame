@@ -13,12 +13,41 @@ namespace JumpingGameClassLibrary
         {
             GameIsRunning = false;
         }
-        public string GenerateBoard()
+        public int[][] GenerateBoard()
         {
-            // Haven't figured out dimensions. y = 5(could be higher), x = ?
-            return "hi";
+            var board = new int[8][]; ;
+            for (int i = 0; i < 8; i++)
+            {
+                var row = new int[100];
+                for (int j = 0; j < 100; j++)
+                {
+                    if (i == 7) row[j] = 2;
+                    else row[j] = 0;
+                }
+                board[i] = row;
+            }
+            return board;
         }
-
+        public string GetBoardAsString(int[][] board)
+        {
+            var output = @"";
+            for(var i = 0; i < 8; i++)
+            {
+                var row = board[i];
+                var rowString = "";
+                foreach (var space in row)
+                {
+                    if (space == 0)
+                        rowString += " ";
+                    else if (space == 2)
+                        rowString += "T";
+                }
+                if (i < 7)
+                    rowString += "\n";
+                output += rowString;
+            }
+            return output;
+        }
         public void UpdateBoard()
         {
             throw new NotImplementedException();

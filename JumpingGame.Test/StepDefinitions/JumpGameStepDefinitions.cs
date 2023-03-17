@@ -27,15 +27,30 @@ namespace JumpingGame.Test.StepDefinitions
         [When("board is generated")]
         public void BoardGenerated()
         {
-            string boardString = _board.GenerateBoard();
-            _scenarioContext.Add("board", boardString);
+            var board = _board.GenerateBoard();
+            var boardString = _board.GetBoardAsString(board);
+            _scenarioContext.Add("board", board);
+            _scenarioContext.Add("boardString", boardString);
+        }
+        [Then("board array is created")]
+        public void BoardArrayIsCreated()
+        {
+            throw new PendingStepException();
         }
         [Then("string representation is created")]
         public void Board()
         {
-            
-            string expectedString = "";
-            _scenarioContext["board"].Should().Be(expectedString);
+            // Height of 8, 20 by 8
+            string expectedString = @"                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT";
+            _scenarioContext["boardString"].Should().Be(expectedString);
         }
     }
 }
