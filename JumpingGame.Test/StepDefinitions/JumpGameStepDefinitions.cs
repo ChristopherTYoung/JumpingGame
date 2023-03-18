@@ -48,7 +48,6 @@ namespace JumpingGame.Test.StepDefinitions
                                                                                                     
                                                                                                     
                                                                                                     
-                                                                                                    
 TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT";
             _scenarioContext["boardString"].Should().Be(expectedString);
         }
