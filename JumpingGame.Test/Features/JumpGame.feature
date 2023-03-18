@@ -18,3 +18,7 @@ Scenario: The board is generated
 Scenario: Board is represented as string
 	When board is generated
 	Then string representation is created
+Scenario: Player is generated on board
+	Given game is started
+	When board is generated
+	Then player is generated on board

@@ -42,6 +42,8 @@ namespace JumpingGameClassLibrary
                         rowString += " ";
                     else if (space == 2)
                         rowString += "T";
+                    else if (space == 1)
+                        rowString += "F";
                 }
                 if (i < 7)
                     rowString += "\n";
