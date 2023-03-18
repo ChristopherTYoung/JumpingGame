@@ -6,12 +6,3 @@ var boardArray = board.GenerateBoard();
 var boardString = board.GetBoardAsString(boardArray);
 
 Console.WriteLine(boardString);
-string expectedString = @"                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT";
-Console.WriteLine(expectedString);

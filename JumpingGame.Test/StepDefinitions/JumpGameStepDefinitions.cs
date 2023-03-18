@@ -32,24 +32,28 @@ namespace JumpingGame.Test.StepDefinitions
             _scenarioContext.Add("board", board);
             _scenarioContext.Add("boardString", boardString);
         }
+        [When("the player loses")]
+        public void ThePlayerLoses()
+        {
+            _board.EndGame();
+        }
         [Then("board array is created")]
         public void BoardArrayIsCreated()
         {
-            throw new PendingStepException();
+            _scenarioContext["board"].Should().BeOfType<int[][]>();
         }
         [Then("string representation is created")]
         public void Board()
         {
             // Height of 8, 20 by 8
-            string expectedString = @"                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT";
+            string expectedString = "                                                                                                    \n                                                                                                    \n                                                                                                    \n                                                                                                    \n                                                                                                    \n                                                                                                    \n                                                                                                    \nTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT";
+
             _scenarioContext["boardString"].Should().Be(expectedString);
+        }
+        [Then("the game ends")]
+        public void GameEnds()
+        {
+            _board.GameIsRunning.Should().BeFalse();
         }
     }
 }

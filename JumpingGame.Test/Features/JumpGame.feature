@@ -9,6 +9,9 @@ Link to a feature: [Calculator](JumpingGame.Test/Features/Calculator.feature)
 Scenario: Game Started
 	When game is started
 	Then game is running
+Scenario: Game has Ended
+	When the player loses
+	Then the game ends
 Scenario: The board is generated
 	When board is generated
 	Then board array is created
