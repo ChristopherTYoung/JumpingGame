@@ -22,3 +22,17 @@ Scenario: Player is generated on board
 	Given game is started
 	When board is generated
 	Then player is generated on board
+Scenario: Player Jumps
+	Given player is generated on board
+	Then player feet are at position 2
+	When player hits jump
+	When advance the clock
+	Then player feet are at position 3
+	When advance the clock
+	Then player feet are at position 4
+	When advance the clock
+	Then player feet are at position 4
+	When  advance the clock 
+	Then player feet are at position 3
+	When advance the clock
+	Then player feet are at position 2
