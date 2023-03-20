@@ -55,5 +55,55 @@ namespace JumpingGame.Test.StepDefinitions
         {
             _board.GameIsRunning.Should().BeFalse();
         }
+        [Given("game is started")]
+        public void GameIsStarted()
+        {
+            _board.RunGame();
+        }
+        [Then("player is generated on board")]
+        public void PlayerIsGeneratedOnBoard()
+        {
+            throw new NotImplementedException();
+        }
+        [Given("player is generated on board")]
+        public void PlayerGenerated()
+        {
+            throw new NotImplementedException();
+        }
+        [Then("player feet are at position 2")]
+        public void PlayerIsOnGround()
+        {
+            throw new NotImplementedException();
+        }
+        [When("player hits jump")]
+        public void PlayerHitJump()
+        {
+            throw new NotImplementedException();
+        }
+        [When("advance clock")]
+        public void AdvanceingTime()
+        {
+            throw new NotImplementedException();
+        }
+        [Then("player feet are at position 3")]
+        public void PlayerIsJumping()
+        {
+            throw new NotImplementedException();
+        }
+        [Then("player feet are at position 4")]
+        public void PlayerIsStillJumping()
+        {
+            throw new NotImplementedException();
+        }
+        [Then("player feet are at position 4")]
+        public void PlayerIsAtMax()
+        {
+            throw new NotImplementedException();
+        }
+        [Then("player feet are at position 3")]
+        public void PlayerIsFalling()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

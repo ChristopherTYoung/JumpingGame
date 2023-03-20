@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JumpingGameClassLibrary
 {
-    public interface IGame
+    internal interface Interface1
     {
         int[] Generate();
     }
