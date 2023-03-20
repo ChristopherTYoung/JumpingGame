@@ -10,9 +10,11 @@ namespace JumpingGameClassLibrary
     public class Board
     {
         public bool GameIsRunning { get; set; }
+        public Player _player;
         public Board()
         {
             GameIsRunning = false;
+            _player = new Player();
         }
         public int[][] GenerateBoard()
         {
@@ -51,7 +53,7 @@ namespace JumpingGameClassLibrary
             }
             return output;
         }
-        public void UpdateBoard()
+        public void UpdateBoard(int[][] board)
         {
             throw new NotImplementedException();
         }
