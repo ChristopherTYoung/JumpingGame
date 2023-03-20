@@ -70,38 +70,18 @@ namespace JumpingGame.Test.StepDefinitions
         {
             throw new NotImplementedException();
         }
-        [Then("player feet are at position 2")]
-        public void PlayerIsOnGround()
-        {
-            throw new NotImplementedException();
-        }
         [When("player hits jump")]
         public void PlayerHitJump()
         {
             throw new NotImplementedException();
         }
-        [When("advance clock")]
+        [Given("advance clock")]
         public void AdvanceingTime()
         {
             throw new NotImplementedException();
         }
-        [Then("player feet are at position 3")]
-        public void PlayerIsJumping()
-        {
-            throw new NotImplementedException();
-        }
-        [Then("player feet are at position 4")]
-        public void PlayerIsStillJumping()
-        {
-            throw new NotImplementedException();
-        }
-        [Then("player feet are at position 4")]
-        public void PlayerIsAtMax()
-        {
-            throw new NotImplementedException();
-        }
-        [Then("player feet are at position 3")]
-        public void PlayerIsFalling()
+        [Then("player feet are at position (.*)")]
+        public void PlayerIsJumping(int position)
         {
             throw new NotImplementedException();
         }

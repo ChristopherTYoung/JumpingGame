@@ -4,7 +4,7 @@ namespace JumpingGameClassLibrary
 {
     public class Cactus : IGame
     {
-        public int[] Generate()
+        public int[] Generate(string[] Icon)
         {
             throw new NotImplementedException();
         }

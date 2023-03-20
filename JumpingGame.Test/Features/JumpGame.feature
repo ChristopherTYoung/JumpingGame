@@ -26,13 +26,13 @@ Scenario: Player Jumps
 	Given player is generated on board
 	Then player feet are at position 2
 	When player hits jump
-	When advance the clock
+	Given advance the clock
 	Then player feet are at position 3
-	When advance the clock
+	And advance the clock
 	Then player feet are at position 4
-	When advance the clock
+	And advance the clock
 	Then player feet are at position 4
-	When  advance the clock 
+	And advance the clock 
 	Then player feet are at position 3
-	When advance the clock
+	And advance the clock
 	Then player feet are at position 2

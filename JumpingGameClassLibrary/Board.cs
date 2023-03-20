@@ -53,7 +53,7 @@ namespace JumpingGameClassLibrary
             }
             return output;
         }
-        public void UpdateBoard(int[][] board)
+        public void UpdateBoard(int[][] board, Player _player)
         {
             throw new NotImplementedException();
         }

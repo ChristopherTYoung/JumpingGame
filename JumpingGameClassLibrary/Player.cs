@@ -15,7 +15,7 @@ namespace JumpingGameClassLibrary
             Y_Position = 7;
             Icon = new string[] { "O", "|", "L" };
         }
-        public int[] Generate()
+        public int[] Generate(string[] Icon)
         {
             throw new NotImplementedException();
         }
