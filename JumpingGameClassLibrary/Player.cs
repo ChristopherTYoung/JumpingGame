@@ -23,7 +23,54 @@ namespace JumpingGameClassLibrary
         public void Jump()
         {
             PlayerHasJumped = true;
-            throw new NotImplementedException();
+            // call time tik
+            // y position change
+                // if(position 0)
+           if (PlayerHasJumped) 
+           {
+                // set to position 1 y = 3
+                Y_Position = 3;
+                // call tik
+           }
+
+            // elseif(position 1 && position 2 has not occured)
+           else if()
+           {
+                // set to position 2 y = 2
+                // call tik and wait
+                // call tik
+                Y_Position = 2;
+
+            }
+            
+
+            // elseif(position 2 )
+            else if ()
+            {
+                // set to position 1 y = 3
+                // call tik
+                Y_Position = 3;
+            }
+            
+
+            //  elseif(position 1 && position 2 has occured)
+            else if ()
+            {
+                // set to position 0 y = 4
+                //call tik
+                Y_Position = 4;
+            }
+            
+
+            // else (position is 0)
+            else
+            {
+                // set PlayerHasJumped = false
+                Y_Position = 4;
+                PlayerHasJumped = false;
+            }
+            
+            // throw new NotImplementedException();
         }
         public void Duck()
         { 

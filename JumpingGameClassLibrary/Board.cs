@@ -27,7 +27,7 @@ namespace JumpingGameClassLibrary
                 for (int j = 0; j < 100; j++)
                 {
                     if (i == 7) row[j] = 2;
-                    else if(i == playerPosition && j == 3 && i != 7)
+                    else if (i == playerPosition && j == 3 && i != 7)
                     {
                         row[j] = 1;
                         LengthOfPlayer--;
@@ -43,7 +43,7 @@ namespace JumpingGameClassLibrary
         {
             var LengthOfPlayer = player.Length;
             var output = @"";
-            for(var i = 0; i < 8; i++)
+            for (var i = 0; i < 8; i++)
             {
                 var row = board[i];
                 var rowString = "";
@@ -66,9 +66,21 @@ namespace JumpingGameClassLibrary
             }
             return output;
         }
-        public void UpdateBoard(int[][] board, Player _player)
+        public int[][] UpdateBoard(int[][] board, Player _player)
         {
-            throw new NotImplementedException();
+            // new random enemy and cactus generation 
+            // duplcate character possition
+            // generate new player in duplicate position
+            // run tik
+            // check for collision
+            //if collision
+            // return game over
+            //else
+            // return updated board
+            var Curplayer = _player.Generate();
+
+            return GenerateBoard(Curplayer);
+            // throw new NotImplementedException();
         }
 
         public void EndGame()
@@ -84,6 +96,9 @@ namespace JumpingGameClassLibrary
 
             //while(GameIsRunning)
             //{
+                // call thread.sleep;
+                // set board = UpdateBoard;
+                // set condition for end game upon collision detection;
 
             //}
         }
