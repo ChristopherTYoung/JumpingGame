@@ -7,11 +7,13 @@ namespace JumpingGame.Test.StepDefinitions
     {
         private readonly ScenarioContext _scenarioContext;
         private readonly Board _board;
+        private readonly Player _player;
 
         public JumpGameStepDefinitions(ScenarioContext scenarioContext)
         {
             _scenarioContext = scenarioContext;
             _board = new Board();
+            _player = new Player();
         }
 
         [When("game is started")]
@@ -27,8 +29,10 @@ namespace JumpingGame.Test.StepDefinitions
         [When("board is generated")]
         public void BoardGenerated()
         {
-            var board = _board.GenerateBoard();
-            var boardString = _board.GetBoardAsString(board);
+            var player = _player.Generate();
+            var board = _board.GenerateBoard(player);
+            
+            var boardString = _board.GetBoardAsString(board, player);
             _scenarioContext.Add("board", board);
             _scenarioContext.Add("boardString", boardString);
         }
@@ -63,13 +67,17 @@ namespace JumpingGame.Test.StepDefinitions
         [Then("player is generated on board")]
         public void PlayerIsGeneratedOnBoard()
         {
-            throw new NotImplementedException();
+            string expectedString = "                                                                                                    \n                                                                                                    \n                                                                                                    \n                                                                                                    \n   O                                                                                                \n   Y                                                                                                \n   L                                                                                                \nTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT";
+
+            _scenarioContext["boardString"].Should().Be(expectedString);
         }
         [Given("player is generated on board")]
         public void PlayerGenerated()
         {
-            throw new NotImplementedException();
-        }
+            string expectedString = "                                                                                                    \n                                                                                                    \n                                                                                                    \n                                                                                                    \n   O                                                                                                \n   Y                                                                                                \n   L                                                                                                \nTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT";
+
+            _scenarioContext["boardString"].Should().Be(expectedString);
+        } 
         [When("player hits jump")]
         public void PlayerHitJump()
         {

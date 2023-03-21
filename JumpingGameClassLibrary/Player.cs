@@ -9,18 +9,20 @@ namespace JumpingGameClassLibrary
     public class Player : IGame
     {
         public int Y_Position { get; set; }
-        public string[] Icon { get; set; }
+        public bool PlayerHasJumped { get; set; }
+        public bool PlayerHasDucked { get; set; }
         public Player() 
         {
-            Y_Position = 7;
-            Icon = new string[] { "O", "|", "L" };
+            Y_Position = 4;
         }
-        public int[] Generate(string[] Icon)
+        public string[] Generate()
         {
-            throw new NotImplementedException();
+            if (PlayerHasDucked) return new string[] { "L", "O" };
+            else return new string[] { "L", "Y", "O" };
         }
         public void Jump()
         {
+            PlayerHasJumped = true;
             throw new NotImplementedException();
         }
         public void Duck()

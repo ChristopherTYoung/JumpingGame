@@ -8,6 +8,6 @@ namespace JumpingGameClassLibrary
 {
     public interface IGame
     {
-        int[] Generate(string[] Icon);
+        string[] Generate();
     }
 }
