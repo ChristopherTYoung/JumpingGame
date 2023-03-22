@@ -81,14 +81,14 @@ namespace JumpingGame.Test.StepDefinitions
         [When("player hits jump")]
         public void PlayerHitJump()
         {
-            throw new NotImplementedException();
+            _player.Jump();
         }
         [Given("advance clock")]
         public void AdvanceingTime()
         {
             throw new NotImplementedException();
         }
-        [Then("player feet are at position (.*)")]
+        [Then("players head is at position (.*)")]
         public void PlayerIsJumping(int position)
         {
             throw new NotImplementedException();

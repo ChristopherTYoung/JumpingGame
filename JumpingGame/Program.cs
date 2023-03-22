@@ -3,6 +3,7 @@ using JumpingGameClassLibrary;
 
 var board = new Board();
 var player = new Player();
+//board.RunGame();
 var playerString = player.Generate();
 var boardArray = board.GenerateBoard(playerString);
 var boardString = board.GetBoardAsString(boardArray, playerString);

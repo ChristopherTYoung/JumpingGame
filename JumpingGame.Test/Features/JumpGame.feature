@@ -27,12 +27,12 @@ Scenario: Player Jumps
 	Then player feet are at position 2
 	When player hits jump
 	Given advance the clock
-	Then player feet are at position 3
+	Then players head is at position 3
 	And advance the clock
-	Then player feet are at position 4
+	Then players head is at position 4
 	And advance the clock
-	Then player feet are at position 4
+	Then players head is at position 4
 	And advance the clock 
-	Then player feet are at position 3
+	Then players head is at position 3
 	And advance the clock
-	Then player feet are at position 2
+	Then players head is at position 2

@@ -23,15 +23,26 @@ namespace JumpingGameClassLibrary
         public void Jump()
         {
             PlayerHasJumped = true;
+            Y_Position++;
+            Thread.Sleep(1000);
+            Y_Position++;
+            Thread.Sleep(1000);
+            Y_Position++;
+            Thread.Sleep(1000);
+            Y_Position--;
+            Thread.Sleep(1000);
+            Y_Position--;
+            Thread.Sleep(1000);
+            Y_Position--;
             // call time tik
             // y position change
                 // if(position 0)
-           if (PlayerHasJumped) 
-           {
+           // if (PlayerHasJumped) 
+           //{
                 // set to position 1 y = 3
-                Y_Position = 3;
+                //Y_Position = 3;
                 // call tik
-           }
+           //}
 
             // elseif(position 1 && position 2 has not occured)
            //else if()

@@ -99,6 +99,12 @@ namespace JumpingGameClassLibrary
                 // call thread.sleep;
                 // set board = UpdateBoard;
                 // set condition for end game upon collision detection;
+                //Thread.Sleep(1000);
+                //_player.Jump();
+                //board = UpdateBoard(board, _player);
+                //Console.WriteLine(GetBoardAsString(board, player));
+                //if (_player.Y_Position == 4 && _player.PlayerHasJumped)
+                    //EndGame();
 
             //}
         }
