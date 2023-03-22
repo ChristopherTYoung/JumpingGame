@@ -34,43 +34,42 @@ namespace JumpingGameClassLibrary
            }
 
             // elseif(position 1 && position 2 has not occured)
-           else if()
-           {
+           //else if()
+           //{
                 // set to position 2 y = 2
                 // call tik and wait
                 // call tik
-                Y_Position = 2;
+                //Y_Position = 2;
 
-            }
+            //}
             
 
             // elseif(position 2 )
-            else if ()
-            {
+            //else if ()
+            //{
                 // set to position 1 y = 3
                 // call tik
-                Y_Position = 3;
-            }
+                //Y_Position = 3;
+            //}
             
 
             //  elseif(position 1 && position 2 has occured)
-            else if ()
-            {
+            //else if ()
+            //{
                 // set to position 0 y = 4
                 //call tik
-                Y_Position = 4;
-            }
+                //Y_Position = 4;
+            //}
             
 
             // else (position is 0)
-            else
-            {
+            //else
+            //{
                 // set PlayerHasJumped = false
-                Y_Position = 4;
-                PlayerHasJumped = false;
-            }
+                //Y_Position = 4;
+                //PlayerHasJumped = false;
+            //}
             
-            // throw new NotImplementedException();
         }
         public void Duck()
         { 
