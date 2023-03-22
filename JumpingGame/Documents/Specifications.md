@@ -1,9 +1,10 @@
 ### Specifications:
 ## The game will need to generate a board
-	- In the board class, we will have a generate board method.
-	- We are going to use a 2 Dimensional array to represent the board
-	- The board will be generated as a string in the console
+	Done - In the board class, we will have a generate board method.
+	Done - We are going to use a 2 Dimensional array to represent the board
+	Done - The board will be generated as a string in the console
 ## The player will need to be able to jump
+	Done - We will generate the player on board
 	- We will detect if a player has pressed the jump key.
 	- The characters position will move upwards
 	- The jump will be registered in the update board method in the board class
